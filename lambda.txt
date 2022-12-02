@@ -1,0 +1,34 @@
+
+0 := λf.λx.x
+1 := λf.λx.f x
+2 := λf.λx.f(f x)
+3 := λf.λx.f(f(f x)
+4 := λf.λx.f(f(f(f x)))
+5 := λf.λx.f(f(f(f(f x))))
+6 := λf.λx.f(f(f(f(f(f x)))))
+7 := λf.λx.f(f(f(f(f(f(f x))))))
+8 := λf.λx.f(f(f(f(f(f(f(f x)))))))
+9 := λf.λx.f(f(f(f(f(f(f(f(f x))))))))
+
+D := λo.(((o 4) 8) 3)
+E := λo.(((o 1) 5) 9)
+F := λo.(((o 7) 2) 6)
+G := λo.(((o 3) 4) 8)
+H := λo.(((o 1) 5) 9)
+I := λo.(((o 2) 6) 6)
+X := λx.λy.λz.x
+Y := λx.λy.λz.y
+Y := λx.λy.λz.z
+
+// Task 1:
+A := λo.λx.D(o x)
+B := λo.λx.E(o x)
+C := λo.λx.F(o x)
+
+// Task 2:
+A := λo.λx.G(o x)
+B := λo.λx.H(o x)
+C := λo.λx.I(o x)
+
+// input must be appended then terminated with 0
+
